@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { HeroCard } from "@/components/ui/hero-card"
 import { AuthModal } from "@/components/auth/auth-modal"
+import { ThreeBackground } from "@/components/3d/three-background"
 import { MapPin, Users, Camera, Globe } from "lucide-react"
 import heroImage from "@/assets/jharkhand-hero.jpg"
 
@@ -21,12 +22,15 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* 3D Background */}
+      <ThreeBackground />
+      
       {/* Enhanced Background with Particles */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
           alt="Beautiful Jharkhand landscape with forests, hills and waterfalls" 
-          className="w-full h-full object-cover scale-105 animate-pulse duration-[20s]"
+          className="w-full h-full object-cover scale-105 animate-pulse duration-[20s] opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-secondary/30 to-accent/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
