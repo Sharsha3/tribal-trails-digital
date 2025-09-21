@@ -1,7 +1,9 @@
 import { Navigation } from "@/components/layout/navigation"
 import { HeroSection } from "@/components/home/hero-section"
+import { FeaturesSection } from "@/components/home/features-section"
 import { DestinationsSection } from "@/components/home/destinations-section"
 import { MarketplaceSection } from "@/components/home/marketplace-section"
+import { TestimonialsSection } from "@/components/home/testimonials-section"
 import { Footer } from "@/components/layout/footer"
 
 const Index = () => {
@@ -10,8 +12,10 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSection />
+        <FeaturesSection />
         <DestinationsSection />
         <MarketplaceSection />
+        <TestimonialsSection />
       </main>
       <Footer />
     </div>

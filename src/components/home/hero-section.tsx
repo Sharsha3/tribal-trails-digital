@@ -21,14 +21,31 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Enhanced Background with Particles */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
           alt="Beautiful Jharkhand landscape with forests, hills and waterfalls" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105 animate-pulse duration-[20s]"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/40 to-accent/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-secondary/30 to-accent/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
+        
+        {/* Floating Particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-white/20 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${3 + Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Content */}
